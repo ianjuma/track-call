@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html ng-app="metricSlice">
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <title>Call &acd; tracking</title>
+  <link href="static/assets/favicon.png" rel="icon" type="image/png">
+  <link href='http://fonts.googleapis.com/css?family=Roboto|Montserrat:400,700|Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link href="static/assets/stylesheets/style.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+  <style>
+
+  .spacing-table {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 15px;
+    border-collapse: separate;
+    border-spacing: 0 5px;
+    }
+    .spacing-table th {
+        text-align: left;
+        padding: 5px 15px;
+    }
+    .spacing-table td {
+        border-width: 3px 0;
+        border-color: darkred;
+        border-style: solid;
+        background-color: red;
+        color: white;
+        padding: 5px 15px;
+    }
+    .spacing-table td:first-child {
+        border-left-width: 3px;
+        border-radius: 5px 0 0 5px;
+    }
+    .spacing-table td:last-child {
+        border-right-width: 3px;
+        border-radius: 0 5px 5px 0;
+    }
+    #content {
+      margin: auto;
+      width: 60%;
+      padding: 10px;
+    }
+    ol { list-style-type: none }
+
+    table {
+    	display: table;
+    	width: 200;
+    	border-collapse: separate;
+    	border-spacing: 2px;
+    	border-color: red;
+	}
+  </style>
+
+  <!-- Google Analytics -->
+  <script>
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-78705248-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  <!-- End Google Analytics -->
+
+</head>
+<body>
+<div class="navbar navbar-default navbar-static-top" role="navigation" bs-navbar>
+  <div class="navbar-header">
+    <a class="navbar-brand" href="/">
+      <span>Call<strong> &angzarr; tracking</strong></span>
+    </a>
+  </div>
+  <ul class="nav navbar-nav">
+    <li data-match-route="/detail"><a href="/detail">Call Details</a></li>
+  </ul>
+  <ul class="nav navbar-nav">
+    <li data-match-route="/ga"><a href="/ga">GA</a></li>
+  </ul>
+  <ul class="nav navbar-nav pull-right">
+    <li data-match-route="/main"><a href="/">Credits</a></li>
+  </ul>
+</div>
+
+<div id="content"> {% block content %}{% endblock %} </div>
+
+</body>
+</html>

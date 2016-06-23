@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h4>
+<table class="spacing-table">
+	<tr>
+    <th>Location</th>
+	  <th>View ID</th> 
+	  <th>Phone Number</th>
+	</tr>
+
+	<tr>
+
+    {% for user in data %}
+    <td>{{ user.location }}</td>
+    <td>{{ user.url }}</td>
+    <td>+254711082514</td>
+    {% endfor %}
+	</tr>
+
+</table>
+</h4>
+
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}
